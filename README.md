@@ -4,6 +4,10 @@ This is a website containing 3 webpages which cover all the projects which I hav
 
 <br>
 
+Hosted Website Link: http://kongolian.xyz/Portfolios/Pinda/index.html
+
+<br>
+
 I have developed using the following languages/frameworks:
 
 - HTML
