@@ -4,7 +4,7 @@ This is a website containing 3 webpages which cover all the projects which I hav
 
 <br>
 
-Hosted Website Link: http://kongolian.xyz/Portfolios/Pinda/index.html
+Hosted Website Link: https://www.devpinda.dev/index.html
 
 <br>
 
