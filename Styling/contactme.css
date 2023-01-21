@@ -11,25 +11,13 @@ html {
     height: 100vh;
 }
 
-@media (width: 3840px) {
-    nav:hover {
-        background-image: url('../Images/star_upscaled.jpg');
-        image-rendering: optimizeQuality;
-        background-size: cover;
-    }
-}
-
-@media (width: 2560px) {
-    nav:hover {
-        background-image: url('../Images/star_upscaled.jpg');
-        image-rendering: optimizeQuality;
-        background-size: cover;
-    }
+::-webkit-scrollbar{
+    display: none;
 }
 
 nav {
     display: flex;
-    box-shadow: inset 0px 0px 1vw 0px #5a07a8;
+    box-shadow: inset 0 0 1vw 0 #5a07a8;
     margin: 0;
     padding: 3.75vw;
     padding-left: 7.8vw;
@@ -44,7 +32,8 @@ nav {
 
 nav:hover {
     background-image: url('../Images/star.jpg');
-    box-shadow: inset 0px 0px 8vw 0px #5a07a8;
+    background-size: 50vw;
+    box-shadow: inset 0 0 8vw 0 #5a07a8;
     image-rendering: optimizeQuality;
 }
 
@@ -116,46 +105,56 @@ body {
 #iconContainer {
     display: inline-flex;
     margin-top: 1.8vw;
-    margin-bottom: 1.4vw;
+    margin-bottom: 1.25vw;
     width: 100%;
-    height: auto;
+    height: 6vw;
     justify-content: right;
 }
 
 #icons {
     display: flex;
     width: 12vw;
-    height: 4vw;
+    height: 5vw;
     overflow:hidden;
     margin-right: 1.6vw;
     justify-content: space-around;
-    justify-self: right;
+    justify-self: center;
     align-items: center;
-    transition-duration: .3s;
 }
 
-#icon1 {
+#icon {
     display: inherit;
     width: 4vw;
     height: auto;
+    align-self: center;
+    justify-self: center;
     image-rendering: optimizeQuality;
     border-radius: 50%;
     background-color: #fff;
     box-shadow: 0 0 0.1vw white;
     padding: 0.2vw;
-    transition-duration: .3s;
+    margin: 0.35vw;
+    transition-duration: .1s;
 }
 
-#icon1:hover {
-    margin-top: 0.15vw;
+#icon:hover {
+    margin-top: 1vw;
     border-radius: 50%;
     background-color: #5a07a8;
     cursor: pointer;
 }
 
+#iconLinks{
+    display: inherit;
+    width:fit-content;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+}
+
 #mainContainer {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 50vw;
     justify-self: center;
     align-self: center;
@@ -167,8 +166,8 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    height: 26.25vw;
-    width: 32.5vw;
+    height: 30vw;
+    width: 40vw;
     border: solid 0.2vw #5a07a8;
     box-shadow: 0.05vw 0.05vw .6vw 0.001vw #fff;
     background: linear-gradient(245deg, #1f1f1f, #3a3a3a);
@@ -183,40 +182,37 @@ body {
 }
 
 #textContainer:hover{
-    height: 29vw;
-    width: 35vw;
-}
-
-#textContainer:hover #heading{
-    font-size: 3vw;
-}
-
-#textContainer:hover #name{
-    font-size: 1.75vw;
-    margin-bottom: .25vw;
-}
-
-#textContainer:hover #email{
-    font-size: 1.75vw;
-    margin-top: .25vw;
+    height: 27.5vw;
+    width: 37.5vw;
+    box-shadow: 0 0 1.05vw 0.001vw #fff;
+    border: solid 0.3vw red;
 }
 
 #textContainer:hover #emailButton{
-    width: 7vw;
-    height: 2.625vw;
+    text-shadow: 0 0 0.1vw rgb(255, 0 , 0);
+    -webkit-text-stroke: 0.02vw rgb(255, 0 , 0);
+    border: 0.25vw solid rgb(255, 0, 0);
 }
 
 #textContainer:hover #gitButton{
-    width: 14vw;
-    height: 2.8vw;
+    text-shadow: 0 0 0.1vw rgb(255, 0 , 0);
+    -webkit-text-stroke: 0.02vw rgb(255, 0 , 0);
+    border: 0.25vw solid rgb(255, 0, 0);
 }
 
-#textContainer:hover #buttonText1{
-    font-size: 1.05vw;
+#textContainer:hover #name{
+    text-shadow: 0 0 0.1vw rgb(255, 0 , 0);
+    -webkit-text-stroke: 0.02vw rgb(255, 0 , 0);
 }
 
-#textContainer:hover #buttonText2{
-    font-size: 1vw;
+#textContainer:hover #email{
+    text-shadow: 0 0 0.1vw rgb(255, 0 , 0);
+    -webkit-text-stroke: 0.02vw rgb(255, 0 , 0);
+}
+
+#textContainer:hover #heading{
+    text-shadow: 0 0 0.1vw rgb(255, 0 , 0);
+    -webkit-text-stroke: 0.02vw rgb(255, 0 , 0);
 }
 
 #heading {
@@ -236,9 +232,10 @@ body {
     font-size: 1.625vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
-    -webkit-text-stroke: 0.02vw #6f00ff;
+    -webkit-text-stroke: 0.04vw #6f00ff;
     transition-duration: 1s;
     transition-delay: .1s;
+    font-weight: 900;
 }
 
 #email {
@@ -246,9 +243,10 @@ body {
     font-size: 1.625vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
-    -webkit-text-stroke: 0.02vw #6f00ff;
+    -webkit-text-stroke: 0.04vw #6f00ff;
     transition-duration: 1s;
     transition-delay: .1s;
+    font-weight: 900;
 }
 
 #buttonContainer{
@@ -264,62 +262,48 @@ body {
 
 #emailButton {
     display: flex;
-    width: 6.25vw;
-    height: 2.35vw;
+    width: 8vw;
+    height: 3.25vw;
     overflow: hidden;
-    background-color:rgba(197, 197, 197, 0.125);
-    box-shadow: 0 0 0 0.07vw #fff;
-    border-radius: 0.2vw;
-    border: 0.25vw solid #5a07a8;
+    padding: 1vw;
+    background-color:rgba(197, 197, 197, 0.050);
+    flex-direction: row;
+    border-radius: 0.4vw;
+    border: .25vw solid #5a07a8;
     justify-content: center;
     align-items: center;
     transition-duration: 1s;
     transition-delay: .1s;
+    font-size: .95vw;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    -webkit-text-stroke: 0.0375vw #1a1a1a;
 }
 
 #gitButton{
     display: flex;
-    width: 10vw;
-    height: 3.5vw;
+    width: 12vw;
+    height: 4vw;
     overflow: hidden;
-    background-color:rgba(197, 197, 197, 0.125);
-    box-shadow: 0 0 0 0.07vw #fff;
-    border: 0.25vw solid #5a07a8;
-    border-radius: 0.2vw;
+    flex-direction: row;
+    background-color:rgba(197, 197, 197, 0.050);
+    border: .25vw solid #5a07a8;
+    border-radius: 0.4vw;
     align-items: center;
     justify-content: center;
     align-items: center;
     transition-duration: 1s;
     transition-delay: .1s;
-}
-
-#buttonText1 {
-    display: flex;
     font-size: .95vw;
-    font-weight: 600;
-    text-align: center;
+    font-weight: 900;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     color: #fff;
-    justify-self: center;
-    align-self: center;
-    -webkit-text-stroke: 0.0375vw #1a1a1a;
-    transition-duration: 1s;
-    transition-delay: .1s;
-}
-
-#buttonText2 {
-    display: flex;
-    font-size: .95vw;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: none;
-    color: #fff;
-    flex-wrap: wrap;
     text-align: center;
     -webkit-text-stroke: 0.0375vw #1a1a1a;
-    transition-duration: 1s;
-    transition-delay: .1s;
 }
 
 footer {
